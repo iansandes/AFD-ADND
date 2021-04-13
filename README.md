@@ -405,5 +405,17 @@ A entrada '0000' NÃO é aceita pelo autômato proposto!
 2 - Finalizar
 
 Digite: 2
-````
 ```
+
+Para não precisar cadastrar o autômato finito determinístico passo a passo, comente as linhas 140-243 do arquivo main.py, e logo após insira o código abaixo:
+
+```sh
+afnd = AutomatoFinitoNaoDeterministico()
+        afnd.definir_alfabeto(['a','b'])
+        afnd.definir_estados(['q0','q1','q2'])
+        afnd.definir_estado_inicial('q0')
+        afnd.definir_estados_finais(['q2'])
+        afnd.definir_transicoes({'q0' : {'a' : ['q0', 'q1'], 'b' : ['q0']},
+                         'q1' : {'a' : [], 'b' : ['q2']},
+                         'q2' : {'a' : [], 'b' : []}})
+````
