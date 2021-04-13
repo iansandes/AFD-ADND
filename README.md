@@ -411,11 +411,11 @@ Para não precisar cadastrar o autômato finito determinístico passo a passo, c
 
 ```sh
 afnd = AutomatoFinitoNaoDeterministico()
-        afnd.definir_alfabeto(['a','b'])
-        afnd.definir_estados(['q0','q1','q2'])
-        afnd.definir_estado_inicial('q0')
-        afnd.definir_estados_finais(['q2'])
-        afnd.definir_transicoes({'q0' : {'a' : ['q0', 'q1'], 'b' : ['q0']},
+afnd.definir_alfabeto(['a','b'])
+afnd.definir_estados(['q0','q1','q2'])
+afnd.definir_estado_inicial('q0')
+afnd.definir_estados_finais(['q2'])
+afnd.definir_transicoes({'q0' : {'a' : ['q0', 'q1'], 'b' : ['q0']},
                          'q1' : {'a' : [], 'b' : ['q2']},
                          'q2' : {'a' : [], 'b' : []}})
 ````
